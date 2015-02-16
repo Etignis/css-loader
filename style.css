@@ -15,7 +15,6 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
-  background: url('bg1.jpg');
 }
 img {
   border: none;
@@ -356,8 +355,8 @@ img {
   border-style: solid;
   opacity: 0.5;
   border-radius: 30px;
-  animation: a_rotate 3s infinite steps(60);
-  -webkit-animation: a_rotate 3s infinite steps(60);
+  animation: a_rotate 2s infinite steps(60);
+  -webkit-animation: a_rotate 2s infinite steps(60);
 }
 .loading4:before {
   content: "";
@@ -374,8 +373,8 @@ img {
   height: 20px;
   border-radius: 30px;
   outline: solid 5px rgba(0, 0, 0, 0);
-  animation: a_rotate 3s infinite steps(60);
-  -webkit-animation: a_rotate 3s infinite steps(60);
+  animation: a_rotate 6s infinite steps(60);
+  -webkit-animation: a_rotate 6s infinite steps(60);
 }
 .loading4:after {
   content: "";
@@ -393,6 +392,6 @@ img {
   margin: 5px;
   border-radius: 30px;
   outline: solid 5px rgba(0, 0, 0, 0);
-  animation: a_rotate 6s infinite steps(60);
-  -webkit-animation: a_rotate 6s infinite steps(60);
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
 }
