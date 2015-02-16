@@ -1,0 +1,398 @@
+/* CSS crunched with Crunch - http://crunchapp.net/ */
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #555;
+}
+body {
+  margin-left: 0px;
+  margin-top: 0px;
+  margin-right: 0px;
+  margin-bottom: 0px;
+  background-color: #fff;
+  color: #555;
+  width: 100%;
+  height: 100%;
+  font-size: 16px;
+  background: url('bg1.jpg');
+}
+img {
+  border: none;
+}
+.loading1 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
+  /* Chrome, Safari, Opera */
+}
+.loading1:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-right-width: 0;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  display: inline-block;
+  width: 9px;
+  height: 20px;
+  margin: 5px;
+  margin-right: 0;
+  border-radius: 20px 0 0 20px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_border_left  2s infinite;
+  -webkit-animation: a_border_left  2s infinite;
+  /* Chrome, Safari, Opera */
+}
+.loading1:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-width: 5px;
+  border-left-width: 0;
+  border-color: rgba(0, 0, 0, 0.5);
+  border-style: solid;
+  display: inline-block;
+  width: 9px;
+  height: 20px;
+  margin: 5px;
+  margin-left: 0;
+  border-radius: 0 20px 20px 0;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_border_right  12s infinite;
+  -webkit-animation: a_border_right  2s infinite;
+  /* Chrome, Safari, Opera */
+}
+@keyframes a_rotate {
+  from {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    /* Для Firefox */
+    -ms-transform: rotate(0deg);
+    /* Для IE */
+    -webkit-transform: rotate(0deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(0deg);
+    /* Для Opera */
+  }
+  to {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    /* Для Firefox */
+    -ms-transform: rotate(360deg);
+    /* Для IE */
+    -webkit-transform: rotate(360deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(360deg);
+    /* Для Opera */
+  }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes a_rotate {
+  from {
+    transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    /* Для Firefox */
+    -ms-transform: rotate(0deg);
+    /* Для IE */
+    -webkit-transform: rotate(0deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(0deg);
+    /* Для Opera */
+  }
+  to {
+    transform: rotate(360deg);
+    -moz-transform: rotate(360deg);
+    /* Для Firefox */
+    -ms-transform: rotate(360deg);
+    /* Для IE */
+    -webkit-transform: rotate(360deg);
+    /* Для Safari, Chrome, iOS */
+    -o-transform: rotate(360deg);
+    /* Для Opera */
+  }
+}
+@keyframes a_border_left {
+  0% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+  25% {
+    border-width: 6px;
+    border-right-width: 0;
+    margin: 4px;
+    margin-right: 0;
+  }
+  50% {
+    border-width: 6px;
+    border-right-width: 0;
+    margin: 4px;
+    margin-right: 0;
+  }
+  75% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+  100% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes a_border_left {
+  0% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+  50% {
+    border-width: 6px;
+    border-right-width: 0;
+    margin: 4px;
+    margin-right: 0;
+  }
+  25% {
+    border-width: 6px;
+    border-right-width: 0;
+    margin: 4px;
+    margin-right: 0;
+  }
+  75% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+  100% {
+    border-width: 4px;
+    border-right-width: 0;
+    margin: 6px;
+    margin-right: 0;
+  }
+}
+@keyframes a_border_right {
+  0% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+  25% {
+    border-width: 6px;
+    border-left-width: 0;
+    margin: 4px;
+    margin-left: 0;
+  }
+  50% {
+    border-width: 6px;
+    border-left-width: 0;
+    margin: 4px;
+    margin-left: 0;
+  }
+  75% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+  100% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+}
+/* Chrome, Safari, Opera */
+@-webkit-keyframes a_border_right {
+  0% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+  25% {
+    border-width: 6px;
+    border-left-width: 0;
+    margin: 4px;
+    margin-left: 0;
+  }
+  50% {
+    border-width: 6px;
+    border-left-width: 0;
+    margin: 4px;
+    margin-left: 0;
+  }
+  75% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+  100% {
+    border-width: 4px;
+    border-left-width: 0;
+    margin: 6px;
+    margin-left: 0;
+  }
+}
+.loading2 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  opacity: 0.5;
+}
+.loading2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-color: #000000;
+  border-left-color: rgba(0, 0, 0, 0);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
+  /* Chrome, Safari, Opera */
+}
+.loading2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-color: #000000;
+  border-right-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 2s infinite steps(60);
+  -webkit-animation: a_rotate 2s infinite steps(60);
+  /* Chrome, Safari, Opera */
+}
+.loading3 {
+  display: inline-block;
+  width: 40px;
+  height: 40px;
+  position: relative;
+  opacity: 0.5;
+}
+.loading3:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 7px;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 3px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
+  /* Chrome, Safari, Opera */
+}
+.loading3:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-color: #000000;
+  border-left-color: rgba(0, 0, 0, 0);
+  border-right-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 4s infinite steps(120);
+  -webkit-animation: a_rotate 4s infinite steps(120);
+  /* Chrome, Safari, Opera */
+  animation-direction: reverse;
+  -webkit-animation-direction: reverse;
+}
+.loading4 {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-width: 5px;
+  position: relative;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  opacity: 0.5;
+  border-radius: 30px;
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
+}
+.loading4:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 3s infinite steps(60);
+  -webkit-animation: a_rotate 3s infinite steps(60);
+}
+.loading4:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-width: 5px;
+  border-color: rgba(0, 0, 0, 0.8);
+  border-top-color: rgba(0, 0, 0, 0);
+  border-bottom-color: rgba(0, 0, 0, 0);
+  border-style: solid;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 5px;
+  border-radius: 30px;
+  outline: solid 5px rgba(0, 0, 0, 0);
+  animation: a_rotate 6s infinite steps(60);
+  -webkit-animation: a_rotate 6s infinite steps(60);
+}
