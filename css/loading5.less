@@ -1,0 +1,53 @@
+@w: 70px;
+@h: @w;
+@color: white;
+@anim_time;
+.loading5{
+    display: block;        
+    width: @w;
+    height: @h;
+    border-radius: 50%;
+    border: 5px solid white;
+    box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2), inset 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+    
+    position: relative;
+    //background: radial-gradient(at top left, @gr_cl, rgba(255,255,255,0) @gr_pc),  red;
+    
+    animation: colors 30s infinite normal;
+    
+    &:before{
+        content: "";
+        position: absolute;
+        width: @w;
+        height: @h;
+        background: radial-gradient(at top, @gr_cl 10%, rgba(255,255,255,0) @gr_pc),  rgba(255, 255, 255, 0);
+        animation: rotation 2s infinite normal;
+    }
+    &:after {
+        content: "";
+        background: @color;
+        position: absolute;
+        width: @w/2;
+        height: @h/2;
+        top: @h/4;
+        left: @w/4;
+        border-radius: 50%;
+        box-shadow: 0 2px 3px 1px rgba(0, 0, 0, 0.2); 
+        }
+}
+
+@gr_pc: 30%;
+@gr_cl: rgba(255,255,255,.6);
+@keyframes colors {
+    0%{ background: red;}
+    16%{ background: orange;}
+    32%{ background: yellow; }
+    48%{ background: green; }
+    64%{ background: blue; }
+    80%{ background: purple; }
+    100%{ background: red;}
+  }
+@keyframes rotation {
+    0%{ transform: rotate(0deg);}
+    100%{ transform: rotate(360deg);}
+  }
