@@ -17,6 +17,8 @@
 			],
 			"sources": [
 				"loading5.less",
+				"loading6.less",
+				"loading7.less",
 				"style.less"
 			]
 		}

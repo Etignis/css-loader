@@ -1,0 +1,105 @@
+.loading6{
+    @w: 30px;
+    @h: @w;
+    @r: @w * 3;
+    @color61: white;
+    @color62: #e9e9f9;
+    @color63: #e9e9f9;
+    @anim_time;
+    
+    display: block;        
+    width: @w*4;
+    height: @h*4;
+    //background: silver;
+    //order-radius: 50%;    
+    //box-shadow: 0 2px 6px 1px rgba(0, 0, 0, 0.2), inset 0 2px 3px 1px rgba(0, 0, 0, 0.1);
+    
+    position: relative;    
+    //background: radial-gradient(at top left, @gr_cl, rgba(255,255,255,0) @gr_pc),  red;
+    
+    animation: rotation6 1s infinite normal;
+    animation-timing-function: linear;
+    
+    
+    &:before{
+        content: "";
+        background: @color62;
+        position: absolute;
+        top: @w*2 - @w/4;
+        left: @h*2 - @h/4;
+        width: @w/2;
+        height: @h/2;
+        border-radius: 50%;
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+        animation: atom_move1 3s infinite normal;
+        animation-timing-function: linear;
+        //background: radial-gradient(at top, @gr_cl 10%, rgba(255,255,255,0) @gr_pc),  rgba(255, 255, 255, 0);
+        //animation: rotation 2s infinite normal;
+    }
+    
+    &:after {
+        content: "";
+        background: @color63;
+        position: absolute;
+        top: 0;
+        left: @h*2 - @h/4;
+        width: @w/2;
+        height: @h/2;
+        border-radius: 50%;
+        box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
+        animation: atom_move2 3s infinite normal;
+        animation-timing-function: linear;
+        }
+          
+    @keyframes rotation6 {
+        0%{ transform: rotate(0deg);}
+        100%{ transform: rotate(360deg);}
+      }   
+    @keyframes atom_move1 {
+        0%{
+            top: @w*2 - @w/4;
+        }
+        25%{
+            left: @w*4 - @w/4;
+        }
+        50%{
+            width: @w/1.1;
+            height: @h/1.1;
+            background: @color61;
+        }
+        75%{
+            left: @w/4;
+        }
+        100%
+        {top: @w*2 - @w/4;
+        }
+      }
+    @keyframes atom_move2 {
+        0%{
+            top: 0;
+            //background: @color62;
+            }
+        25%{
+            width: @w/1.1;
+            height: @h/1.1;
+           // background: @color61;
+            }
+        50%{
+            top: @h*4 - @h/4;
+            width: @w/2;
+            height: @h/2;
+           // background: @color62;
+            }
+        75%{
+            width: @w/1.1;
+            height: @h/1.1;
+            //background: @color61;
+            }
+        100%{
+            top: 0;
+            //background: @color62;
+            }
+      }
+     
+    
+}
