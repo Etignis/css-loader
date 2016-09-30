@@ -14,9 +14,87 @@ body {
   width: 100%;
   height: 100%;
   font-size: 16px;
+  overflow: hidden;
+  position: relative;
 }
 img {
   border: none;
+}
+.panel {
+  width: 100vw;
+  height: 100vh;
+  background: #e53935;
+  box-shadow: inset 0 0 80px 2px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+  position: absolute;
+  right: 100%;
+  z-index: 5;
+}
+.panel:nth-child(7n+1) {
+  background: #fbc02d;
+}
+.panel:nth-child(7n+2) {
+  background: #689f38;
+}
+.panel:nth-child(7n+3) {
+  background: #4527a0;
+}
+.panel:nth-child(7n+4) {
+  background: #ff8f00;
+}
+.panel:nth-child(7n+5) {
+  background: #455a64;
+}
+.panel:nth-child(7n+6) {
+  background: #00acc1;
+}
+.panel:nth-child(7n+7) {
+  background: #5d4037;
+}
+.panel .preloader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.panel.active {
+  z-index: 10;
+  right: 0;
+  transition: right .4s;
+}
+.panel.hidden {
+  z-index: 5;
+  right: -100%;
+  transition: right .4s;
+}
+#arr_left,
+#arr_right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: inset 0 0 25px 1px rgba(255, 255, 255, 0.1);
+  cursor: pointer;
+  font-size: 200%;
+  color: white;
+  font-weight: bold;
+  padding: 50px;
+  opacity: .4;
+  transition: all .2s;
+  z-index: 20;
+}
+#arr_left:hover,
+#arr_right:hover {
+  background: rgba(255, 255, 255, 0.3);
+  opacity: 1;
+}
+#arr_left {
+  left: 0;
+  border-radius: 0 10% 10% 0;
+}
+#arr_right {
+  right: 0;
+  border-radius: 10% 0 0 10%;
 }
 .loading5 {
   @anim _time;
@@ -228,8 +306,8 @@ img {
 }
 .loading1 {
   display: inline-block;
-  width: 40px;
-  height: 40px;
+  width: 120px;
+  height: 120px;
   position: relative;
   animation: a_rotate 3s infinite steps(60);
   -webkit-animation: a_rotate 3s infinite steps(60);
@@ -240,17 +318,17 @@ img {
   position: absolute;
   top: 0;
   left: 0;
-  border-width: 5px;
+  border-width: 15px;
   border-right-width: 0;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
   border-style: solid;
   display: inline-block;
-  width: 9px;
-  height: 20px;
-  margin: 5px;
+  width: 25px;
+  height: 60px;
+  margin: 15px;
   margin-right: 0;
-  border-radius: 20px 0 0 20px;
-  outline: solid 5px rgba(0, 0, 0, 0);
+  border-radius: 60px 0 0 60px;
+  outline: solid 15px rgba(0, 0, 0, 0);
   animation: a_border_left  2s infinite;
   -webkit-animation: a_border_left  2s infinite;
   /* Chrome, Safari, Opera */
@@ -260,17 +338,17 @@ img {
   position: absolute;
   top: 0;
   right: 0;
-  border-width: 5px;
+  border-width: 15px;
   border-left-width: 0;
-  border-color: rgba(0, 0, 0, 0.5);
+  border-color: rgba(255, 255, 255, 0.5);
   border-style: solid;
   display: inline-block;
-  width: 9px;
-  height: 20px;
-  margin: 5px;
+  width: 25px;
+  height: 60px;
+  margin: 15px;
   margin-left: 0;
-  border-radius: 0 20px 20px 0;
-  outline: solid 5px rgba(0, 0, 0, 0);
+  border-radius: 0 60px 60px 0;
+  outline: solid 15px rgba(0, 0, 0, 0);
   animation: a_border_right  12s infinite;
   -webkit-animation: a_border_right  2s infinite;
   /* Chrome, Safari, Opera */
@@ -326,131 +404,131 @@ img {
 }
 @keyframes a_border_left {
   0% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
   25% {
-    border-width: 6px;
+    border-width: 24px;
     border-right-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-right: 0;
   }
   50% {
-    border-width: 6px;
+    border-width: 24px;
     border-right-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-right: 0;
   }
   75% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
   100% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes a_border_left {
   0% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
   50% {
-    border-width: 6px;
+    border-width: 24px;
     border-right-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-right: 0;
   }
   25% {
-    border-width: 6px;
+    border-width: 24px;
     border-right-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-right: 0;
   }
   75% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
   100% {
-    border-width: 4px;
+    border-width: 8px;
     border-right-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-right: 0;
   }
 }
 @keyframes a_border_right {
   0% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
   25% {
-    border-width: 6px;
+    border-width: 24px;
     border-left-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-left: 0;
   }
   50% {
-    border-width: 6px;
+    border-width: 24px;
     border-left-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-left: 0;
   }
   75% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
   100% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
 }
 /* Chrome, Safari, Opera */
 @-webkit-keyframes a_border_right {
   0% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
   25% {
-    border-width: 6px;
+    border-width: 24px;
     border-left-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-left: 0;
   }
   50% {
-    border-width: 6px;
+    border-width: 24px;
     border-left-width: 0;
-    margin: 4px;
+    margin: 8px;
     margin-left: 0;
   }
   75% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
   100% {
-    border-width: 4px;
+    border-width: 8px;
     border-left-width: 0;
-    margin: 6px;
+    margin: 24px;
     margin-left: 0;
   }
 }

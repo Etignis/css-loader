@@ -16,14 +16,17 @@ body {
 	
 	font-size: 16px;
 	
+	overflow: hidden;
+    position: relative;
 //	background: url('bg1.jpg');
 }	
 img{
 	border: none;
 }
+@import "panel.less";
 
-@b_w_min: 4px;
-@b_w_max: 6px;
+@b_w_min: 8px;
+@b_w_max: 24px;
 @b_w_time: 3s;
 
 @import "loading5.less";
@@ -31,56 +34,58 @@ img{
 @import "loading7.less";
 
 .loading1{	
+    @bw: 15px;
+    @w: 50px;
+    @bc: rgba(255,255,255,0.5);
 	display: inline-block;
-	width: 40px;
-	height: 40px;
+	width: 120px;
+	height: 120px;
 	position: relative;
 	animation: a_rotate  3s infinite steps(60);
 	-webkit-animation: a_rotate  3s infinite steps(60); /* Chrome, Safari, Opera */
-}
-.loading1:before{
-	content:"";
-	position: absolute;
-	top:0;
-	left: 0;
-	border-width:5px;
-	border-right-width:0;
-	border-color: rgba(0,0,0,0.5);
-	border-style: solid;
-	display: inline-block;
-	width: 9px;
-	height: 20px;
 	
-	margin: 5px;
-	margin-right: 0;
-	border-radius: 20px 0 0 20px;
-	outline: solid 5px rgba(0,0,0,0);	
-	
-	animation: a_border_left  2s infinite;
-	-webkit-animation: a_border_left  2s infinite; /* Chrome, Safari, Opera */
+	&:before{
+    	content:"";
+    	position: absolute;
+    	top:0;
+    	left: 0;
+    	border-width: @bw;
+    	border-right-width:0;
+    	border-color: @bc;
+    	border-style: solid;
+    	display: inline-block;
+    	width: @w/2;
+    	height: 60px;
+    	
+    	margin: 15px;
+    	margin-right: 0;
+    	border-radius: 60px 0 0 60px;
+    	outline: solid 15px rgba(0,0,0,0);	
+    	
+    	animation: a_border_left  2s infinite;
+    	-webkit-animation: a_border_left  2s infinite; /* Chrome, Safari, Opera */
+    }
+    &:after{
+    	content:"";
+    	position: absolute;
+    	top:0;
+    	right: 0;
+    	border-width: @bw;
+    	border-left-width:0;
+    	border-color: @bc;
+    	border-style: solid;
+    	display: inline-block;
+    	width: @w/2;
+    	height: 60px;
+    	margin: 15px;
+    	margin-left: 0;
+    	border-radius:0 60px 60px 0;
+    	outline: solid 15px rgba(0,0,0,0);
+    	
+    	animation: a_border_right  12s infinite;
+    	-webkit-animation: a_border_right  2s infinite; /* Chrome, Safari, Opera */
+    }
 }
-
-.loading1:after{
-	content:"";
-	position: absolute;
-	top:0;
-	right: 0;
-	border-width:5px;
-	border-left-width:0;
-	border-color: rgba(0,0,0,0.5);
-	border-style: solid;
-	display: inline-block;
-	width: 9px;
-	height: 20px;
-	margin: 5px;
-	margin-left: 0;
-	border-radius:0 20px 20px 0;
-	outline: solid 5px rgba(0,0,0,0);
-	
-	animation: a_border_right  12s infinite;
-	-webkit-animation: a_border_right  2s infinite; /* Chrome, Safari, Opera */
-}
-
 
 @keyframes a_rotate  {
  from {

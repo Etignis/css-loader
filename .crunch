@@ -19,6 +19,7 @@
 				"loading5.less",
 				"loading6.less",
 				"loading7.less",
+				"panel.less",
 				"style.less"
 			]
 		}
