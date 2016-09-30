@@ -33,6 +33,7 @@
         top: @w/2 - @bw/2;
         left: @h/2 - @bh/2;
         border-radius: 50%;
+        border: @w/2 solid @color71;
         //box-shadow: 0 0 6px 1px rgba(0, 0, 0, 0.2);
         animation: l74 @anim_time infinite normal;
         //animation-delay: @anim_time;
@@ -58,68 +59,33 @@
         animation-timing-function: @anim_f;
         }
    /*  */  
-    @keyframes l71 {
-        0%{ 
-            background: @color72; 
-        }
-        100%{  
-            background: @color70;
-        }
-    }  
-    @keyframes l72 {
-        0%{ 
-            @bw: 2*@w/3;
-            @bh: 2*@h/3;
-            background: @color71;
-            width: @bw;
-            height: @bh;
-            top: @w/2 - @bw/2;
-            left: @h/2 - @bh/2; 
-            }
-        100%{ 
-            @bw: @w;
-            @bh: @h;
-            background: @color72;
-            width: @bw;
-            height: @bh;
-            top: @w/2 - @bw/2;
-            left: @h/2 - @bh/2; 
-            }
-    }  
-    @keyframes l73 {
-        0%{ 
-            @bw: 0;
-            @bh: 0;
-            //background: @color72;
-            width: @bw;
-            height: @bh;
-            top: @w/2 - @bw/2;
-            left: @h/2 - @bh/2; 
-            }
-        100%{ 
-            @bw: 2*@w/3;
-            @bh: 2*@h/3;
-            background: @color71;
-            width: @bw;
-            height: @bh;
-            top: @w/2 - @bw/2;
-            left: @h/2 - @bh/2; 
-            }
-    }  
+  
     @keyframes l74 {
         0%{ 
             @bw: 0;
             @bh: 0;
             background: @color72;
+            border: 0 solid @color72;
             width: @bw;
             height: @bh;
             top: @w/2 - @bw/2;
             left: @h/2 - @bh/2; 
             }
+        50%{             
+            border: @w/4 solid @color72;
+            @bw: @w/2;
+            @bh: @h/2;
+            width: @bw;
+            height: @bh;
+            background: @color70;
+            top: @w/2 - @bw/2 - @w/4;
+            left: @h/2 - @bh/2 - @h/4; 
+            }
         100%{ 
             @bw: @w;
             @bh: @h;
             background: @color70;
+            border: 0 solid @color70;
             width: @bw;
             height: @bh;
             top: @w/2 - @bw/2;
